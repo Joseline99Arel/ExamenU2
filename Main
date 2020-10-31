@@ -1,0 +1,16 @@
+package Clases;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Arel
+ */
+public class Main {
+    public static void main (String[] args)
+    {
+        Logica Objeto = new Logica();
+        Objeto.Insertar();
+        System.out.println("Los numeros ingresados son: ");
+        Objeto.Mostar(1);
+    }
+}
