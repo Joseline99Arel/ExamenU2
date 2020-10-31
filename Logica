@@ -1,0 +1,67 @@
+package Clases;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Arel
+ */
+public class Logica {
+    
+     Scanner Leer = new Scanner (System.in);
+    
+    List<Integer> Impares = new ArrayList<>();
+    List<Integer> Pares = new ArrayList<>();
+    int Valor, Par, Imp, b;
+    
+    public void Insertar()
+    {
+        if(b<10)
+        {
+            System.out.println("Ingresa un numero");
+            Valor=Leer.nextInt();
+            
+            if(Valor % 2==0)
+            {
+                
+                if(Pares.size()<5)
+                {
+                    Pares.add(Valor);
+                    b++;
+                }
+                else
+                {
+                    System.out.println("Ya ingresaste todos los pares");
+                }
+                
+            }
+            else
+            {
+                if(Impares.size()<5)
+                {
+                    Impares.add(Valor);
+                    b++;
+                }
+                else
+                {
+                    System.out.println("Impares LLenos ");
+                }
+            }
+            Insertar();
+        }        
+    }
+    
+    public void Mostar(int x)
+    {
+        if(x<=10)
+        {
+            System.out.println(Pares.get(Imp));
+            Imp++;
+            System.out.println(Impares.get(Par));
+            Par++;
+            Mostar(x+1);
+        }
+    }
+}
